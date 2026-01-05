@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostline | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">Boostline<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Products</h1>
+        <p>Premium Discord Services</p>
+    </div>
+
+    <section class="section">
+        <div class="filter-container fade-in">
+            <button class="filter-btn active" data-filter="boosts">Server Boosts</button>
+            <button class="filter-btn" data-filter="tokens">Nitro Tokens</button>
+            <button class="filter-btn" data-filter="bots">Discord Bots</button>
+            <button class="filter-btn" data-filter="members">Real Members</button>
+        </div>
+
+        <div class="grid-container">
+            
+            <div class="card fade-in" data-category="boosts">
+                <div class="card-image-box">
+                    <img src="./assets/boost.png" alt="Boosts">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Select Option</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$7.00 - $11.00</span>
+                        <span class="stock-text in-stock">In Stock</span>
+                    </div>
+                    <h3>Server Boosts</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="tokens">
+                <div class="card-image-box">
+                    <img src="https://placehold.co/400x400/111/fc8bfb?text=Tokens" alt="Tokens">
+                    <div class="hover-overlay">
+                        <button class="btn-select disabled">Out of Stock</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$0.35 - $1.50</span>
+                        <span class="stock-text out-stock">0 In Stock</span>
+                    </div>
+                    <h3>Nitro Tokens</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="bots">
+                <div class="card-image-box">
+                    <img src="./assets/bot.png" alt="Ticket Bot">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Purchase</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$10.00</span>
+                        <span class="stock-text in-stock">Lifetime</span>
+                    </div>
+                    <h3>Ticket Bot</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="bots">
+                <div class="card-image-box">
+                    <img src="./assets/bot.png" alt="Mass DM">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Purchase</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$10.00</span>
+                        <span class="stock-text in-stock">Lifetime</span>
+                    </div>
+                    <h3>Mass DM Bot</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="bots">
+                <div class="card-image-box">
+                    <img src="./assets/bot.png" alt="Welcome Bot">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Purchase</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$10.00</span>
+                        <span class="stock-text in-stock">Lifetime</span>
+                    </div>
+                    <h3>Welcome Bot</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="bots">
+                <div class="card-image-box">
+                    <img src="./assets/bot.png" alt="Vouch Bot">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Purchase</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$10.00</span>
+                        <span class="stock-text in-stock">Lifetime</span>
+                    </div>
+                    <h3>Vouch Bot</h3>
+                </div>
+            </div>
+
+            <div class="card fade-in" data-category="members">
+                <div class="card-image-box">
+                    <img src="./assets/mem.png" alt="Members">
+                    <div class="hover-overlay">
+                        <button class="btn-select">Select Amount</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="price-row">
+                        <span class="price-text">$1.00 - $15.00</span>
+                        <span class="stock-text in-stock">In Stock</span>
+                    </div>
+                    <h3>Real Members</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="selectionModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Select Option</h3>
+            <p id="modalDesc">Choose your preference below.</p>
+            <div class="modal-options duration-grid" id="opt-duration" style="display:none;">
+                <button class="option-btn" data-tag="1m"><span class="lbl">1 Month</span><span class="prc">$7.00</span></button>
+                <button class="option-btn recommended" data-tag="3m"><span class="lbl">3 Months</span><span class="prc">$11.00</span></button>
+            </div>
+            <div class="modal-options member-grid" id="opt-members" style="display:none;">
+                <button class="option-btn small" data-tag="100">100 ($1)</button>
+                <button class="option-btn small" data-tag="200">200 ($2)</button>
+                <button class="option-btn small" data-tag="300">300 ($3)</button>
+                <button class="option-btn small" data-tag="400">400 ($4)</button>
+                <button class="option-btn small" data-tag="500">500 ($5)</button>
+                <button class="option-btn small" data-tag="600">600 ($6)</button>
+                <button class="option-btn small" data-tag="700">700 ($7)</button>
+                <button class="option-btn small" data-tag="800">800 ($8)</button>
+                <button class="option-btn small" data-tag="900">900 ($9)</button>
+                <button class="option-btn small recommended" data-tag="1000">1k ($10)</button>
+                <button class="option-btn small recommended" data-tag="2000">2k ($15)</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Boostline.</h3>
+            <p>&copy; 2026 Boostline. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Boostline.</h3>
+            <p>&copy; 2026 Boostline. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Selects all main purchase buttons and modal option buttons
+            // :not(.disabled) ensures the "Out of Stock" button doesn't redirect
+            const buyButtons = document.querySelectorAll('.btn-select:not(.disabled), .option-btn');
+
+            buyButtons.forEach(button => {
+                // Remove existing clicks (like opening the modal) and force redirect
+                button.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // Stops the modal from opening
+                    window.location.href = "https://discord.gg/boostline";
+                };
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
